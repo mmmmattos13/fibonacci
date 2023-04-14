@@ -1,0 +1,16 @@
+numero = int(input("Informe um número: "))
+termo1 = 0
+termo2 = 1
+
+print('{}~ {}'.format(termo1, termo2), end='')
+if numero == termo1 or numero == termo2:
+  print("Numero " + numero + "está na sequência de fibonacci!")
+else:
+  for cont in range(1,numero):    
+    termo3 = termo1 + termo2
+    print('~ {}'.format(termo3), end='')
+    if termo3 == numero:
+      aux = numero     
+    termo1 = termo2
+    termo2 = termo3
+print("\nNumero {} está na sequência de fibonacci!".format(aux))
